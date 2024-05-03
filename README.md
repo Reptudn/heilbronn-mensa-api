@@ -1,8 +1,16 @@
-# heilbronn-mensa-api
+# Heilbronn Mensa API
 Webscraping API for Bildungscampus Heilbronn Mensa by jkauker
 
 ### Route
-`/api/menu/<lang>/<date/today>`
+#### /api/<location>/menu/<lang>/<date/today>
+returns the menu for that day
+#### /api/location/
+returns a list of all mensa locations
+#### /api/<location>/menu/<lang>
+returns all menus in the database with the given language
+
+### Parameters
+- location: `soon`
 - lang: `de`/`en`
 - date format: `dd.mm.yyyy`
 
