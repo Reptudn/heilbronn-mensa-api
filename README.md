@@ -26,7 +26,7 @@ Webscraping API for Bildungscampus Heilbronn Mensa by jkauker
   ],
   "lang": "de"
 },
-date: "03.05.2024"
+"date": "03.05.2024"
 ```
 
 ### Dish Types:
