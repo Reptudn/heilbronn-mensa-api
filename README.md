@@ -1,5 +1,5 @@
 # Heilbronn Mensa API
-Webscraping API for Bildungscampus Heilbronn Mensa by jkauker
+Webscraping API for Bildungscampus Heilbronn Mensa by [jkauker](https://profile.intra.42.fr/users/jkauker)
 
 ### Route
 #### /api/location/menu/lang/<date/today>
