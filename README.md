@@ -1,7 +1,7 @@
 # heilbronn-mensa-api
 Webscraping API for Bildungscampus Heilbronn Mensa by jkauker
 
-### Sample Response for `/api/menu/today`
+### Sample Response for `/api/menu/de/today`
 ```json
 "menu": {
   "dishes": [
@@ -12,7 +12,7 @@ Webscraping API for Bildungscampus Heilbronn Mensa by jkauker
         "guest": "6,76",
         "worker": "4,99"
       },
-      type: "Dessert"
+      "type": "Dessert"
     },
     {
       "name": "Sample Dish 2",
@@ -21,7 +21,7 @@ Webscraping API for Bildungscampus Heilbronn Mensa by jkauker
         "guest": "5,49",
         "worker": "3,45"
       },
-      type: "Soup"
+      "type": "Soup"
     }
   ],
   "lang": "de"
