@@ -9,13 +9,13 @@ import (
 	"github.com/PuerkitoBio/goquery"
 )
 
-func GetUrl(date string, location string, lang string) string {
+func GetUrl(date string, lang string) string {
 	return fmt.Sprintf("https://www.stw.uni-heidelberg.de/external-tools/speiseplan/speiseplan.php?lang=%s&mode=Mensa+Bildungscampus+Heilbronn&date=%s", date, date)
 }
 
-func GetMenuData(date string, location string, lang string) *Menu {
+func GetMenuData(date string, lang string) *Menu {
 
-	url := GetUrl(date, location, lang)
+	url := GetUrl(date, lang)
 
 	resp, err := http.Get(url)
 	if err != nil {

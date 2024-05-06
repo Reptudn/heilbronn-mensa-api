@@ -2,6 +2,7 @@ package main
 
 import (
 	"encoding/json"
+	"fmt"
 	"log"
 	"net/http"
 	"time"
@@ -11,9 +12,11 @@ import (
 
 func SetupRoutes(r *mux.Router) {
 
+	log.Default().Println("Setting up routes...")
+
 	r.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 
-		w.Write([]byte("Hello, World!"))
+		fmt.Printf("Hello, World!")
 
 	}).Methods("GET")
 
@@ -35,7 +38,7 @@ func SetupRoutes(r *mux.Router) {
 			return
 		}
 
-		menu := GetMenuData(date, "asda", lang)
+		menu := GetMenuData(date, lang)
 		if menu == nil {
 			http.Error(w, err.Error(), http.StatusInternalServerError)
 			return
@@ -50,5 +53,7 @@ func SetupRoutes(r *mux.Router) {
 		w.Header().Set("Content-Type", "application/json")
 		w.Write(menuJson)
 	}).Methods("GET")
+
+	log.Default().Println("Routes setup.")
 
 }

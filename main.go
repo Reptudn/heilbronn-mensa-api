@@ -11,6 +11,8 @@ import (
 
 func PrepareDB(db *sql.DB) {
 
+	log.Default().Println("Preparing database...")
+
 	statement, _ := db.Prepare("CREATE TABLE IF NOT EXISTS menu (id INTEGER PRIMARY KEY, date TEXT, lang TEXT)")
 	statement.Exec()
 
@@ -20,9 +22,12 @@ func PrepareDB(db *sql.DB) {
 	statement, _ = db.Prepare("CREATE TABLE IF NOT EXISTS price (id INTEGER PRIMARY KEY, dish_id INTEGER, student TEXT, guest TEXT, worker TEXT, FOREIGN KEY(dish_id) REFERENCES dish(id))")
 	statement.Exec()
 
+	log.Default().Println("Database prepared.")
+
 }
 
 func main() {
+
 	log.Default().Println("Starting server...")
 
 	router := mux.NewRouter()
@@ -36,5 +41,9 @@ func main() {
 	PrepareDB(db)
 	SetupRoutes(router)
 
+	log.Default().Println("Server started.")
+	log.Default().Println("Listening on port 4242...")
+
 	http.ListenAndServe("localhost:4242", router)
+
 }
