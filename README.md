@@ -1,6 +1,11 @@
 # Heilbronn Mensa API
 Webscraping API for Bildungscampus Heilbronn Mensa by [jkauker](https://profile.intra.42.fr/users/jkauker)
 
+### How to run?
+1. Need to have docker installed
+2. Be able to run Makefiles (usually preinstalled on linux systems)
+3. run `make run`
+
 ### Route
 #### /api/location/menu/lang/<date/today>
 returns the menu for that day

@@ -6,6 +6,3 @@ docker-build:
 
 run: docker-build
     docker run -p 4242:4242 api
-
-local:
-	go run *.go
