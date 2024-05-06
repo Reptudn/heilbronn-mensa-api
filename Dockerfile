@@ -1,10 +1,11 @@
-FROM python:3
+FROM golang:1.22
 
-WORKDIR /usr/src/app
-
-COPY requirements.txt ./
-RUN pip install --no-cache-dir -r requirements.txt
+WORKDIR /app
 
 COPY . .
 
-CMD [ "python", "./main.py" ]
+RUN go build -o api .
+
+EXPOSE 4242
+
+ENTRYPOINT [ "/app/api" ]

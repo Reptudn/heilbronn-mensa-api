@@ -1,6 +1,0 @@
-beautifulsoup4
-schedule
-python-dotenv
-schedule
-flask
-flask_cors
