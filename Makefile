@@ -1,6 +1,3 @@
-build:
-    go build -o api .
-
 docker-build:
     docker build . -t api
 
