@@ -13,6 +13,11 @@ func GetMenu(ctx *gin.Context) {
 	ctx.IndentedJSON(http.StatusOK, menu)
 }
 
+func TestHi(ctx *gin.Context) {
+	ctx.IndentedJSON(http.StatusOK, "hello")
+}
+
 func SetupRoutes(r *gin.Engine) {
 	r.GET("/api/mensa/menu/:lang/:date", GetMenu)
+	r.GET("/", TestHi)
 }
