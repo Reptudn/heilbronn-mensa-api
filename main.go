@@ -5,7 +5,7 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/gorilla/mux"
+	"github.com/gin-gonic/gin"
 	_ "github.com/mattn/go-sqlite3"
 )
 
@@ -30,7 +30,7 @@ func main() {
 
 	log.Default().Println("Starting server...")
 
-	router := mux.NewRouter()
+	router := gin.Default()
 	db, err := sql.Open("sqlite3", "./menu.db")
 
 	if err != nil {
@@ -38,12 +38,13 @@ func main() {
 	}
 	defer db.Close()
 
-	PrepareDB(db)
+	// PrepareDB(db)
 	SetupRoutes(router)
 
 	log.Default().Println("Server started.")
 	log.Default().Println("Listening on port 4242...")
 
+	router.Run("localhost:4242")
 	http.ListenAndServe("localhost:4242", router)
 
 }

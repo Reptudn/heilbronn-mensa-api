@@ -7,14 +7,14 @@ Webscraping API for Bildungscampus Heilbronn Mensa by [jkauker](https://profile.
 3. run `make run`
 
 ### Route
-#### /api/menu/lang/date
+#### /api/mensa/menu/lang/date
 returns the menu for that day
 
 ### Parameters
 - lang: `de`/`en`
 - date format: `dd-mm-yyyy`
 
-### Sample Response for `/api/menu/de/today`
+### Sample Response for `/api/mensa/menu/de/today`
 ```json
 "menu": {
   "dishes": [
