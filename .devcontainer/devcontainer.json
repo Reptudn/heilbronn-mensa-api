@@ -1,0 +1,17 @@
+{
+	"name": "Heilbronn Mensa API",
+	"dockerFile": "../Dockerfile",
+	"customizations": {
+		"vscode": {
+			"settings": { 
+				"files.autoSave": "onFocusChange",
+				"editor.renderWhitespace": "all",
+				"editor.insertSpaces": false
+			},
+			"extensions": [
+				"GitHub.copilot",
+				"golang.go"
+			]
+		}
+	}
+	}
