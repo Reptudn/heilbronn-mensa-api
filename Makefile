@@ -7,5 +7,5 @@ docker-build:
 run: docker-build
     docker run -p 4242:4242 api
 
-attatched: docker-build
+attached: docker-build
     docker run -d -p 4242:4242 api
