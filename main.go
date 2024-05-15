@@ -30,12 +30,12 @@ func main() {
 	log.Default().Println("Starting server...")
 
 	router := gin.Default()
-	db, err := sql.Open("sqlite3", "./menu.db")
+	// db, err := sql.Open("sqlite3", "./menu.db")
 
-	if err != nil {
-		log.Fatal(err)
-	}
-	defer db.Close()
+	// if err != nil {
+	// 	log.Fatal(err)
+	// }
+	// defer db.Close()
 
 	// PrepareDB(db)
 	SetupRoutes(router)
@@ -43,5 +43,5 @@ func main() {
 	log.Default().Println("Server started.")
 	log.Default().Println("Listening on port 4242...")
 
-	router.Run("78.47.147.153:4242")
+	router.Run("localhost:4242")
 }
