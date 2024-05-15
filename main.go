@@ -43,5 +43,5 @@ func main() {
 	log.Default().Println("Server started.")
 	log.Default().Println("Listening on port 4242...")
 
-	router.Run("localhost:4242")
+	router.Run(":4242")
 }
